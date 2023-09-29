@@ -1,0 +1,231 @@
+:root {
+  /* primary text */
+  --VeryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+  --SoftRed: hsl(14, 88%, 65%);
+
+  /* primary bg gradient */
+  --SoftViolet: hsl(273, 75%, 66%);
+  --SoftBlue: hsl(240, 73%, 65%);
+
+  /* neutral text */
+  --VeryDarkGrayishBlue: hsl(237, 12%, 33%);
+  --DarkGrayishBlue: hsl(240, 6%, 50%);
+
+  /* dividers */
+  --LightGrayishBlue: hsl(240, 5%, 91%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+body {
+  height: fit-content;
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif; /* 400, 700 */
+  background: no-repeat linear-gradient(var(--SoftViolet), var(--SoftBlue));
+}
+
+main {
+  max-width: 100%; /* 920px; */
+  height: 510px;
+  margin: 8.138020833% auto; /* 125px */
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 59.895833333%; /* 920px; */
+  height: 510px;
+  margin: 8.138020833% auto; /* 125px */
+  position: relative;
+}
+
+.left-sect {
+  width: 50%;
+}
+
+.right-sect {
+  width: 50%;
+}
+
+/* left section SVG */
+.woman {
+  position: absolute;
+  top: 70px; /* 70px; */
+  left: -80px; /* -80px; */
+  z-index: 2;
+}
+
+.box {
+  position: absolute;
+  top: 210px;
+  left: -110px;
+  z-index: 3;
+}
+
+.bg {
+  position: absolute;
+  top: -300px;
+  left: -575px;
+  z-index: 1;
+}
+
+/* right section FAQ */
+.right-sect {
+  padding: 40px 90px 0 15px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--VeryDarkDesaturatedBlue);
+  margin-bottom: 35px;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  color: var(--VeryDarkGrayishBlue);
+  font-weight: 700;
+  font-size: 14px;
+  border-bottom: 1px solid var(--LightGrayishBlue);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.all-quest {
+  color: var(--DarkGrayishBlue);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.quest {
+  cursor: pointer;
+  /*   position: relative;
+ */
+  background: no-repeat url("../../images/icon-arrow-down.svg");
+  background-position: right;
+}
+
+.reverse::after {
+  visibility: visible;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: no-repeat url("../../images/icon-arrow-down.svg");
+  position: absolute;
+  top: -20px;
+  right: 0;
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+.quest:hover,
+.quest:active {
+  color: var(--SoftRed);
+}
+
+@media screen and (max-width: 1300px) {
+  .woman {
+    width: 350px;
+    position: absolute;
+    top: 70px; /* 70px; */
+    left: -80px; /* -80px; */
+    z-index: 2;
+  }
+
+  .box {
+    width: 150px;
+    position: absolute;
+    top: 170px;
+    left: -100px;
+    z-index: 3;
+  }
+
+  .bg {
+    width: 850px;
+    position: absolute;
+    top: -300px;
+    left: -575px;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    width: 375px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    overflow: visible; /* hidden */
+    margin: 200px auto 0 auto;
+    height: 540px;
+  }
+
+  .left-sect {
+    width: 100%;
+    height: 100px;
+  }
+
+  .right-sect {
+    width: 100%;
+    padding: 20px 30px 0 30px;
+  }
+
+  .woman {
+    width: 280px;
+    position: absolute;
+    top: -125px; /* 70px; */
+    left: 45px; /* -80px; */
+    z-index: 2;
+  }
+
+  .box {
+    width: 110px;
+    position: absolute;
+    top: -40px;
+    left: 40px;
+    z-index: 3;
+  }
+
+  .bg {
+    width: 250px;
+    position: absolute;
+    top: -125px;
+    left: 58px;
+    z-index: 1;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  ul li {
+    margin-bottom: 20px;
+  }
+}
